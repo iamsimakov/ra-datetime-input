@@ -1,27 +1,13 @@
 # aor-datetime-input
 
-__COMPONENT DESCRIPTION GOES HERE__
-
-
-## Demo & Examples
-
-Live demo: [iamsimakov.github.io/aor-datetime-input](http://iamsimakov.github.io/aor-datetime-input/)
-
-To build the examples locally, run:
-
-```
-npm install
-npm start
-```
-
-Then open [`localhost:8000`](http://localhost:8000) in a browser.
+DateTimeInput component for [Admin-on-Rest](https://github.com/marmelab/admin-on-rest).
+Some tips:
+- TimePicker has not prop `container` and it's always as the dailog(by therminology DatePicker), and so `container='dialog'` for DatePicker is hard-code option.
+- Also a button to clear field is placed to component.
+- For DatePicker and TimePicker was set hard-code style to place its in one line.
 
 
 ## Installation
-
-The easiest way to use aor-datetime-input is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
-
-You can also use the standalone build by including `dist/aor-datetime-input.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
 
 ```
 npm install aor-datetime-input --save
@@ -30,32 +16,41 @@ npm install aor-datetime-input --save
 
 ## Usage
 
-__EXPLAIN USAGE HERE__
 
 ```
-var AorDatetimeInput = require('aor-datetime-input');
+import React from 'react';
+import {
+    Edit,
+    TextInput,
+    LongTextInput,
+    TabbedForm,
+    FormTab,
+} from 'admin-on-rest'
+import DateTimeInput from 'aor-datetime-input';
 
-<AorDatetimeInput>Example</AorDatetimeInput>
+export const NewsEdit = (props) => (
+  <Edit title={<NewsTitle />} {...props}>
+    <TabbedForm>
+      <FormTab>
+        <LongTextInput source="title" validate={required} />
+        <DateTimeInput source="publish_date" validate={required} />
+      </FormTab>
+    </TabbedForm>
+  </Edit>
+);
+
 ```
+## Development
 
-### Properties
+You can build sources:
 
-* __DOCUMENT PROPERTIES HERE__
-
-### Notes
-
-__ADDITIONAL USAGE NOTES__
-
-
-## Development (`src`, `lib` and the build process)
-
-**NOTE:** The source code for the component is in `src`. A transpiled CommonJS version (generated with Babel) is available in `lib` for use with node.js, browserify and webpack. A UMD bundle is also built to `dist`, which can be included without the need for any build system.
-
-To build, watch and serve the examples (which will also watch the component source), run `npm start`. If you just want to watch changes to `src` and rebuild `lib`, run `npm run watch` (this is useful if you are working with `npm link`).
+```
+npm run build
+```
 
 ## License
 
-__PUT LICENSE HERE__
+This library is licensed under the [MIT Licence](https://github.com/iamsimakov/aor-datetime-input/blob/master/LICENSE).
 
 Copyright (c) 2017 iamsimakov.
 

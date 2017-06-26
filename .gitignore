@@ -1,4 +1,7 @@
-lib
 node_modules
 .npm
+.editorconfig
+.eslintignore
+.eslintrc
+example/
 
