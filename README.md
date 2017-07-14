@@ -17,7 +17,7 @@ npm install aor-datetime-input --save
 ## Usage
 
 
-```
+```jsx
 import React from 'react';
 import {
     Edit,
