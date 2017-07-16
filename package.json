@@ -13,10 +13,11 @@
     "url": "https://github.com/iamsimakov/aor-datetime-input/issues"
   },
   "dependencies": {
-    "react": "~15.6.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "material-ui": "~0.18.4",
     "prop-types": "~15.5.10",
-    "admin-on-rest": "^1.1.2"
+    "admin-on-rest": "^1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
