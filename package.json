@@ -1,6 +1,6 @@
 {
   "name": "aor-datetime-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "aor-datetime-input",
   "main": "lib/index.js",
   "author": "iamsimakov",
