@@ -22,9 +22,9 @@ export const datify = input => {
 class DateTimeInput extends Component {
     
     onChange = (_, date) => {
+        this.refs[`${this.props.source}.timePicker`].openDialog();
         this.props.input.onChange(date);
         this.props.input.onBlur();
-        this.refs[`${this.props.source}.timePicker`].openDialog();
     };
 
     onChangeTime = (_, time) => {
@@ -55,7 +55,7 @@ class DateTimeInput extends Component {
 
         return (
           <div>
-          <DatePicker
+            <DatePicker
             {...input}
             errorText={touched && error}
             floatingLabelText={<FieldTitle label={label} source={source} resource={resource} isRequired={isRequired} />}
@@ -85,7 +85,7 @@ class DateTimeInput extends Component {
             ref={`${this.props.source}.timePicker`}
             {...options} />
 
-            <IconButton onTouchTap={this.clearDate} tooltip="Clear Date" tooltipPosition="top-right">
+            <IconButton onClick={this.clearDate} tooltip="Clear Date" tooltipPosition="top-right">
               <BackspaceIcon color='grey' hoverColor='black'/>
             </IconButton>
           </div>
