@@ -6,6 +6,16 @@ Some tips:
 - Also a button to clear field is placed to component.
 - For DatePicker and TimePicker was set hard-code style to place its in one line.
 
+Component will work in two steps:
+1) Select date
+
+![date](https://user-images.githubusercontent.com/11376039/32560600-1b00aefe-c4bb-11e7-9375-fda8459d627a.jpg)
+
+2) Select time
+
+![time](https://user-images.githubusercontent.com/11376039/32560601-1b1dba8a-c4bb-11e7-958a-25f60c457a31.jpg)
+
+Just try it!
 
 ## Installation
 
