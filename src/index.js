@@ -22,9 +22,13 @@ export const datify = input => {
 class DateTimeInput extends Component {
     
     onChange = (_, date) => {
-        this.refs[`${this.props.source}.timePicker`].openDialog();
+        let tempDate = new Date(this.props.input.value);
+        date.setHours(tempDate.getHours());
+        date.setMinutes(tempDate.getMinutes());
+        date.setSeconds(tempDate.getSeconds());
         this.props.input.onChange(date);
         this.props.input.onBlur();
+        this.refs[`${this.props.source}.timePicker`].openDialog();
     };
 
     onChangeTime = (_, time) => {
@@ -103,7 +107,7 @@ DateTimeInput.propTypes = {
     options: PropTypes.object,
     resource: PropTypes.string,
     source: PropTypes.string,
-	labelTime: PropTypes.string
+    labelTime: PropTypes.string
 };
 
 DateTimeInput.defaultProps = {
