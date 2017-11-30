@@ -22,10 +22,13 @@ export const datify = input => {
 class DateTimeInput extends Component {
     
     onChange = (_, date) => {
-        let tempDate = new Date(this.props.input.value);
-        date.setHours(tempDate.getHours());
-        date.setMinutes(tempDate.getMinutes());
-        date.setSeconds(tempDate.getSeconds());
+        if ('undefined' === this.props.input.value) {
+            let tempDate = new Date(this.props.input.value);
+            date.setHours(tempDate.getHours());
+            date.setMinutes(tempDate.getMinutes());
+            date.setSeconds(tempDate.getSeconds());
+        }
+
         this.props.input.onChange(date);
         this.props.input.onBlur();
         this.refs[`${this.props.source}.timePicker`].openDialog();
