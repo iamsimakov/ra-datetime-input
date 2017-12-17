@@ -22,12 +22,10 @@ export const datify = input => {
 class DateTimeInput extends Component {
     
     onChange = (_, date) => {
-        if ('undefined' === this.props.input.value) {
-            let tempDate = new Date(this.props.input.value);
-            date.setHours(tempDate.getHours());
-            date.setMinutes(tempDate.getMinutes());
-            date.setSeconds(tempDate.getSeconds());
-        }
+        let tempDate = new Date(this.props.input.value);
+        date.setHours(tempDate.getHours());
+        date.setMinutes(tempDate.getMinutes());
+        date.setSeconds(tempDate.getSeconds());
 
         this.props.input.onChange(date);
         this.props.input.onBlur();
@@ -58,7 +56,17 @@ class DateTimeInput extends Component {
 
     render() {
         // elStyle deleted because timepicker has not container prop and always show as dialog. for same showing date and time pickers.
-        const { input, isRequired, label, meta: { touched, error }, options, source, resource, labelTime } = this.props;
+        const {
+            input,
+            isRequired,
+            label,
+            meta: { touched, error },
+            options,
+            source,
+            resource,
+            labelTime,
+            timeFormat
+        } = this.props;
 
         return (
           <div>
@@ -82,7 +90,7 @@ class DateTimeInput extends Component {
             {...input}
             errorText={touched && error}
             floatingLabelText={<FieldTitle label={labelTime ? labelTime : 'Time(hours, mins.)'} source={source} resource={resource} isRequired={isRequired} />}
-            format="24hr"
+            format={timeFormat ? timeFormat : '24hr'}
             autoOk
             value={datify(input.value)}
             onChange={this.onChangeTime}
