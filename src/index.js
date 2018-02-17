@@ -64,6 +64,7 @@ class DateTimeInput extends Component {
             label,
             meta: { touched, error },
             options,
+            optionsTime,
             source,
             resource,
             labelTime,
@@ -100,7 +101,7 @@ class DateTimeInput extends Component {
             onDismiss={this.onDismiss}
             style={{display: 'inline-block'}}
             ref={`${this.props.source}.timePicker`}
-            {...options} />
+            {...optionsTime} />
 
             <IconButton onClick={this.clearDate} tooltip="Clear Date" tooltipPosition="top-right">
               <BackspaceIcon color='grey' hoverColor='black'/>
