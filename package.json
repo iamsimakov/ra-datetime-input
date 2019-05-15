@@ -1,20 +1,19 @@
 {
-  "name": "aor-datetime-input",
-  "version": "1.0.3",
-  "description": "aor-datetime-input",
+  "name": "ra-datetime-input",
+  "version": "1.9.1",
+  "description": "ra-datetime-input",
   "main": "lib/index.js",
   "author": "iamsimakov",
-  "homepage": "https://github.com/iamsimakov/aor-datetime-input",
+  "homepage": "https://github.com/iamsimakov/ra-datetime-input",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamsimakov/aor-datetime-input.git"
+    "url": "https://github.com/iamsimakov/ra-datetime-input.git"
   },
   "bugs": {
-    "url": "https://github.com/iamsimakov/aor-datetime-input/issues"
+    "url": "https://github.com/iamsimakov/ra-datetime-input/issues"
   },
   "license": "MIT",
   "devDependencies": {
-    "admin-on-rest": "^1.2.1",
     "babel-cli": "^6.24.1",
     "babel-core": "~6.24.1",
     "babel-eslint": "~7.2.1",
@@ -27,11 +26,14 @@
     "babel-preset-react": "~6.24.1",
     "babel-preset-stage-0": "~6.24.1",
     "babel-register": "~6.24.1",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "material-ui": "~0.18.4",
-    "prop-types": "~15.5.10",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-admin": "^2.9.1",
+    "react": "~16.3.1",
+    "react-dom": "~16.3.1"
+  },
+  "dependencies": {
+    "@date-io/date-fns": "^1.3.5",
+    "date-fns": "^2.0.0-alpha.27",
+    "material-ui-pickers": "^2.2.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -40,7 +42,7 @@
   "keywords": [
     "react",
     "react-component",
-    "aor-datetime-input",
-    "aor-component"
+    "ra-datetime-input",
+    "ra-component"
   ]
 }
