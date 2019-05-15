@@ -2,6 +2,9 @@
 
 Unofficial DateTimeInput component for [react-admin](https://marmelab.com/react-admin).
 
+Component was updated from aor-datetime-input and versioning now started from v1.9.0
+New package https://www.npmjs.com/package/ra-datetime-input
+
 Component will work in two steps:
 1) Select date
 
